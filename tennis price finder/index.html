@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Pro Shop Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎾 Tennis Pro Shop Finder</h1>
+
+        <!-- Pro Shops Section -->
+        <div class="section">
+            <h2>Find Pro Shops Near You</h2>
+            <button class="location-btn" id="find-shops-btn">📍 Find Shops Near Me</button>
+            <div id="shops-list"></div>
+        </div>
+
+        <!-- Discounted Gear Section -->
+        <div class="section">
+            <h2>Discounted Tennis Gear</h2>
+            <div class="brands-container">
+                <button class="brand-btn active" data-brand="all">All Brands</button>
+                <button class="brand-btn" data-brand="wilson">Wilson</button>
+                <button class="brand-btn" data-brand="babolat">Babolat</button>
+                <button class="brand-btn" data-brand="head">Head</button>
+                <button class="brand-btn" data-brand="nike">Nike</button>
+                <button class="brand-btn" data-brand="adidas">Adidas</button>
+            </div>
+            <div class="products-grid" id="products-grid"></div>
+        </div>
+    </div>
+
+    <!-- Google Places API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvSdqdBwEQ-6GO60ZrLf_vw9AFb1WcgtA&libraries=places"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 10px;
+}
+
+.location-btn {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.location-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.location-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#shops-list {
+    display: grid;
+    gap: 15px;
+}
+
+.shop-card {
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.shop-card:hover {
+    border-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+
+.shop-name {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.shop-address {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.shop-distance {
+    color: #000000;
+    font-weight: bold;
+}
+
+.status {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-style: italic;
+}
+
+.brands-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.brand-btn {
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    background: white;
+    color: #000000;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.brand-btn:hover, .brand-btn.active {
+    background: #000000;
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #000000;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-category {
+    font-size: 0.85em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 0;
+}
+
+.product-brand {
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount-price {
+    font-size: 1.3em;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.discount-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
